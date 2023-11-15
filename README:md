@@ -1,7 +1,6 @@
 # DDEV selenium
 
-This ddev allows using selenium to run tests with a default chrome node, with
-possibilities to add more nodes of several browsers.
+Provide selenium setup with a default chrome node, with possibilities to add more nodes of several browsers.
 
 The main purpose of this addon is allowing developers to have a base setup of selenium
 that allows to be extendeds with more selenium nodes like chrome, firefox, or edge. Having
