@@ -23,3 +23,33 @@ The addon contains:
 - Selenium node for chrome
 
 It is possible to add attach additional nodes to the selenium by adding more services to the ddev setup.
+
+### How to add more selenium nodes
+
+To add more nodes, create a custom docker-compose yaml with the node services. Those nodes:
+
+- Must be based on [docker selenium nodes](https://github.com/SeleniumHQ/docker-selenium/#dev-and-beta-on-the-grid).
+- Must be attached to the hub container through this configuration:
+```yaml
+      - SE_EVENT_BUS_HOST=hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+```
+
+Example:
+
+```yaml
+  chrome:
+    image: selenium/node-chrome:4.8.0
+    container_name: ddev-${DDEV_SITENAME}-chrome
+    shm_size: 256M
+    depends_on:
+      - hub
+    environment:
+      - SE_EVENT_BUS_HOST=hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+```
