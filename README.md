@@ -12,7 +12,7 @@ when there are parallel tests being run on the same hub.
 Install this addon by running:
 
 ```
-ddev get metadrop/ddev-selenium-chrome
+ddev get metadrop/ddev-selenium
 ```
 
 ## Architecture
