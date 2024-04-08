@@ -1,3 +1,6 @@
+[![tests](https://github.com/Metadrop/ddev-mkdocs/actions/workflows/tests.yml/badge.svg)](https://github.com/Metadrop/ddev-mkdocs/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
+
+
 # DDEV selenium
 
 Provide selenium setup with a default chrome node, with possibilities to add more nodes of several browsers.
