@@ -1,3 +1,4 @@
+#ddev-generated
 services:
   hub:
     image: selenium/hub:4.8.0
@@ -5,6 +6,8 @@ services:
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
+    external_links:
+      - web:${DDEV_SITENAME}.${DDEV_TLD}
 
   chrome:
     image: selenium/node-chrome:4.8.0
@@ -19,3 +22,5 @@ services:
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
+    external_links:
+      - web:${DDEV_SITENAME}.${DDEV_TLD}
