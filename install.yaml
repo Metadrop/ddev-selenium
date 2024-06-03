@@ -1,3 +1,4 @@
-name: ddev-selenium
+name: selenium
+
 project_files:
   - docker-compose.selenium.yaml
