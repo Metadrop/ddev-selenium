@@ -1,5 +1,5 @@
 [![tests](https://github.com/Metadrop/ddev-selenium/actions/workflows/tests.yml/badge.svg)](https://github.com/Metadrop/ddev-selenium/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
-
+![GitHub Release](https://img.shields.io/github/v/release/Metadrop/ddev-selenium)
 
 # DDEV selenium
 
