@@ -12,9 +12,15 @@ when there are parallel tests being run on the same hub.
 
 ## Installation
 
-Install this addon by running:
+For DDEV v1.23.5 or above run
 
+```sh
+ddev add-on get metadrop/ddev-selenium
 ```
+
+For earlier versions of DDEV run
+
+```sh
 ddev get metadrop/ddev-selenium
 ```
 
