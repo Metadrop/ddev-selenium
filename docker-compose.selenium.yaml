@@ -12,7 +12,7 @@ services:
   chrome:
     image: selenium/node-chrome:4.8.0
     container_name: ddev-${DDEV_SITENAME}-chrome
-    shm_size: 256M
+    shm_size: ${SELENIUM_SHM_SIZE:-256M}
     depends_on:
       - hub
     environment:
