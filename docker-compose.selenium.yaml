@@ -1,7 +1,7 @@
 #ddev-generated
 services:
   hub:
-    image: selenium/hub:4.8.0
+    image: selenium/hub:4.32.0
     container_name: ddev-${DDEV_SITENAME}-hub
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
@@ -9,9 +9,9 @@ services:
     external_links:
       - web:${DDEV_SITENAME}.${DDEV_TLD}
 
-  chrome:
-    image: selenium/node-chrome:4.8.0
-    container_name: ddev-${DDEV_SITENAME}-chrome
+  chromium:
+    image: selenium/node-chromium:136.0
+    container_name: ddev-${DDEV_SITENAME}-chromium
     shm_size: ${CHROME_SHM_SIZE:-256M}
     depends_on:
       - hub
@@ -24,3 +24,4 @@ services:
       com.ddev.approot: ${DDEV_APPROOT}
     external_links:
       - web:${DDEV_SITENAME}.${DDEV_TLD}
+
