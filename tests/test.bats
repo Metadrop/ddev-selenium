@@ -12,7 +12,7 @@ setup() {
 }
 
 health_checks() {
-  output=$(ddev exec -s chrome chromedriver --version)
+  output=$(ddev exec -s chromium chromedriver --version)
   # Check if the output contains "Healthcheck passed!"
   [[ $output == "ChromeDriver "* ]]
 }
