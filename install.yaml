@@ -2,3 +2,9 @@ name: selenium
 
 project_files:
   - docker-compose.selenium.yaml
+
+post_install_actions:
+  - >
+    if ! grep -q "#ddev-generated" docker-compose.selenium.yaml; then
+      sed -i '1i#ddev-generated' docker-compose.selenium.yaml
+    fi
