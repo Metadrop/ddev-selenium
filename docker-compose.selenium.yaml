@@ -10,7 +10,7 @@ services:
       - web:${DDEV_SITENAME}.${DDEV_TLD}
 
   chromium:
-    image: selenium/node-chromium:136.0
+    image: selenium/node-chromium:142.0
     container_name: ddev-${DDEV_SITENAME}-chromium
     shm_size: ${CHROME_SHM_SIZE:-256M}
     depends_on:
