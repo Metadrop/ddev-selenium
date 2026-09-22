@@ -7,7 +7,7 @@ services:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
     external_links:
-      - web:${DDEV_SITENAME}.${DDEV_TLD}
+      - ddev-router:${DDEV_SITENAME}.${DDEV_TLD}
 
   chromium:
     image: selenium/node-chromium:${SELENIUM_CHROMIUM_VERSION:-142.0}
@@ -25,5 +25,4 @@ services:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
     external_links:
-      - web:${DDEV_SITENAME}.${DDEV_TLD}
-
+      - ddev-router:${DDEV_SITENAME}.${DDEV_TLD}
